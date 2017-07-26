@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+
+    <dimen name="headline_info_height">35dp</dimen>
+    <dimen name="headline_height">200dp</dimen>
+    <dimen name="delimiter_width">2dp</dimen>
+
+    <dimen name="list_item_height">100dp</dimen>
+    <dimen name="list_item_image_view_width">160dp</dimen>
+    <dimen name="search_space">40dp</dimen>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/first_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/headline_height"
+        android:layout_below="@+id/toolbar"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/news_first_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/content_description"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/news_first_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/headline_title_background"
+            android:padding="@dimen/padding_8"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/news_first_section"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/headline_info_height"
+            android:layout_above="@+id/news_first_title"
+            android:background="@color/headline_section_background"
+            android:padding="@dimen/padding_8"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/news_first_date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/headline_info_height"
+            android:background="@color/headline_info_background"
+            android:padding="@dimen/padding_8"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:id="@+id/delimiter"
+            android:layout_width="@dimen/delimiter_width"
+            android:layout_height="@dimen/headline_info_height"
+            android:layout_toEndOf="@id/news_first_date"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/news_first_author"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/headline_info_height"
+            android:layout_toEndOf="@id/delimiter"
+            android:background="@color/headline_info_background"
+            android:padding="@dimen/padding_8"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_item" />
+
+    <!-- Loading indicator is only shown before the first load -->
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <!-- Empty view is only visible when the list has no items. -->
+    <TextView
+        android:id="@+id/no_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+</RelativeLayout>
